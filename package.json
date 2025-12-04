@@ -1,14 +1,19 @@
 {
   "name": "temporal-rivian",
-  "module": "index.ts",
+  "module": "index.js",
   "type": "module",
   "scripts": {
     "start:temporal": "temporal server start-dev",
     "stop:temporal": "temporal server stop",
-    "dev": "bun run index.ts"
+    "worker": "tsx src/worker.ts",
+    "client": "tsx src/client.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
