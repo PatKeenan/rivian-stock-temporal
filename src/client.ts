@@ -1,4 +1,7 @@
 // The client is what connects to temporal, starts the workflows, signals or queries them
+// So the worker is what starts the engine but the client is what presses on the gas and communicates with the worker while driving.
+// They can start, signal, query, or terminate the worker.
+// Signals send inputs into the workflow, queries get state out of the workflow, and starts/terminates the worker.
 
 import { Connection, Client } from "@temporalio/client";
 import { rivianAnalystWorkflow } from "./workflows/rivianAnalystWorkflow";
