@@ -45,6 +45,9 @@ const { fetchRivianPrice } = proxyActivities<typeof priceActivities>({
 
 const { fetchRivianNews } = proxyActivities<typeof newsActivities>({
   startToCloseTimeout: "10 seconds",
+  retry: {
+    maximumAttempts: 5,
+  },
 });
 
 const { generateRivianReport } = proxyActivities<typeof summaryActivities>({

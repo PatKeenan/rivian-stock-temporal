@@ -15,7 +15,8 @@ async function run() {
     workflowId: "rivian-analyst-main",
     args: [
       {
-        intervalMs: 60_000, // 1 minute for testing purposes
+        // intervalMs: 60_000, // 1 minute for testing purposes
+        intervalMs: 300_000, // 5 minutes for testing
       },
     ],
   });
